@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bass Boosted Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bass Boosted Music Player</h1>
+        <input type="file" id="fileInput" accept="audio/*">
+        <audio id="audioPlayer" controls></audio>
+        <div class="controls">
+            <label for="bassFrequency">Bass Frequency (Hz): </label>
+            <input type="range" id="bassFrequency" min="20" max="200" value="100">
+            <span id="frequencyValue">100 Hz</span>
+        </div>
+        <div class="controls">
+            <label for="bassBoost">Bass Boost (dB): </label>
+            <input type="range" id="bassBoost" min="0" max="6" value="0" step="0.1">
+            <span id="boostValue">0 dB</span>
+        </div>
+        <div class="loop-control">
+            <label for="loop">Loop: </label>
+            <input type="checkbox" id="loop">
+        </div>
+        <div class="controls">
+            <label for="advancedToggle">Advanced Mode: </label>
+            <input type="checkbox" id="advancedToggle">
+        </div>
+        <div class="advanced-controls" id="advancedControls">
+            <div class="controls">
+                <label for="trebleBoost">Treble Boost (dB): </label>
+                <input type="range" id="trebleBoost" min="0" max="40" value="0" step="0.1">
+                <span id="trebleValue">0 dB</span>
+            </div>
+            <div class="controls">
+                <label for="midRange">Mid-Range Adjustment (dB): </label>
+                <input type="range" id="midRange" min="-20" max="20" value="0" step="0.1">
+                <span id="midValue">0 dB</span>
+            </div>
+            <div class="controls">
+                <label for="stereoWidth">Stereo Width: </label>
+                <input type="range" id="stereoWidth" min="0" max="100" value="50">
+                <span id="widthValue">50%</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
